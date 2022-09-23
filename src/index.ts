@@ -1,13 +1,18 @@
-import express, { Express, Request, Response } from 'express';
-import logger from './config/logger';
-import validationResult from './config/validate'
+import validationResult from './configs/validate'
+import httpServer from './app'
+import { Server } from 'socket.io';
+import logger from './configs/logger';
 
-const app: Express = express();
+const io = new Server(httpServer)
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server');
+io.on('connection', (socket) => {
+  logger.info('socket connected: \n', socket)
+  socket.emit('connection-established', { message: 'Hello from the socket server!!' });
+  socket.on('disconnect', (reason) => {
+    logger.info('socket disconnected, with reason: \n', reason)
+  })
 });
 
-app.listen(validationResult.value.PORT, () => {
-  logger.info(`⚡️[server]: running at https://localhost:${validationResult.value.PORT}`);
-});
+httpServer.listen(validationResult.value.PORT, () => {
+  logger.info(`server listening on port ${validationResult.value.PORT}`)
+})

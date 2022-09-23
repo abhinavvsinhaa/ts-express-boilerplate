@@ -11,7 +11,7 @@ const logErrorOnValidation = (message: string) => {
 }
 
 const envSchema = Joi.object({
-    NODE_ENV: Joi.string().case('lower').valid('development', 'production').required().error((error): any => console.log(error)),
+    NODE_ENV: Joi.string().case('lower').valid('development', 'production').required().error((error): any => logErrorOnValidation('error validating NODE_ENV')),
     MONGO_URI: Joi.string().uri({
         scheme: [
             'mongodb',
@@ -20,7 +20,8 @@ const envSchema = Joi.object({
     })
     .description('Mongo DB URI, can be of type mongodb:// or mongodb+srv://')
     .error(error => logErrorOnValidation('error validating MONGO_URI')),
-    PORT: Joi.number().default(8000).description('Port on which server is running').error(error => logErrorOnValidation('error validating PORT'))
+    PORT: Joi.number().default(8000).description('Port on which server is running').error(error => logErrorOnValidation('error validating PORT')),
+    MORGAN_LOGGER: Joi.string().case('lower').valid('dev', 'combined').required().error((error): any => logErrorOnValidation('error validating MORGAN_LOGGER'))
 })
 .unknown() // overrrides the handling of unknown keys
 

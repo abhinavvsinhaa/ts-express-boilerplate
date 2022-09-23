@@ -1,0 +1,50 @@
+[23-09-22 12:22:38]: 	uncaughtException: Cannot find module '../app'
+Require stack:
+- /home/abhinav/Desktop/test-deployment/dist/index.js
+Error: Cannot find module '../app'
+Require stack:
+- /home/abhinav/Desktop/test-deployment/dist/index.js
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)
+    at Function.Module._load (node:internal/modules/cjs/loader:778:27)
+    at Module.require (node:internal/modules/cjs/loader:1005:19)
+    at require (node:internal/modules/cjs/helpers:102:18)
+    at Object.<anonymous> (/home/abhinav/Desktop/test-deployment/dist/index.js:8:31)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+[23-09-22 12:23:11]: 	uncaughtException: validationResultM is not defined
+ReferenceError: validationResultM is not defined
+    at Object.<anonymous> (/home/abhinav/Desktop/test-deployment/dist/index.js:9:22)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+[23-09-22 13:33:24]: 	uncaughtException: logge is not defined
+ReferenceError: logge is not defined
+    at Server.<anonymous> (/home/abhinav/Desktop/test-deployment/dist/index.js:12:5)
+    at Object.onceWrapper (node:events:641:28)
+    at Server.emit (node:events:527:28)
+    at emitListeningNT (node:net:1406:10)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+[23-09-22 14:07:06]: 	uncaughtException: app_1.default.get is not a function
+TypeError: app_1.default.get is not a function
+    at Object.<anonymous> (/home/abhinav/Desktop/test-deployment/dist/index.js:9:15)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
+[23-09-22 14:12:34]: 	uncaughtException: app_1.default.get is not a function
+TypeError: app_1.default.get is not a function
+    at Object.<anonymous> (/home/abhinav/Desktop/test-deployment/dist/index.js:9:15)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47
